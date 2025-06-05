@@ -48,7 +48,7 @@ class _LoginViewState extends State<LoginView> {
               ),
             ),
           );
-        } else if (state.status == LoginStatus.loading) {
+        } else {
           Center(child: CircularProgressIndicator());
         }
       },

@@ -44,53 +44,51 @@ class _SignUpViewState extends State<SignUpView> {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            SizedBox(
-              height: 148.h,
-              child: Form(
-                key: formKey,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    AppTextFormField(
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'First field is required';
-                        }
-                        return null;
-                      },
-                      hintText: "Ism",
-                      controller: firstNameController,
-                      prefix: "assets/icons/user.svg",
-                    ),
-                    AppTextFormField(
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Second field is required';
-                        }
-                        return null;
-                      },
-                      hintText: "Familiya",
-                      controller: lastNameController,
-                      prefix: "assets/icons/user.svg",
-                    ),
-                    AppTextFormField(
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Third field is required';
-                        }
-                        return null;
-                      },
-                      hintText: "Elektron pochta",
-                      controller: emailController,
-                      prefix: "assets/icons/email.svg",
-                    ),
-                  ],
-                ),
+            Form(
+              key: formKey,
+              child: Column(
+                spacing: 5.h,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AppTextFormField(
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return 'First field is required';
+                      }
+                      return null;
+                    },
+                    hintText: "Ism",
+                    controller: firstNameController,
+                    prefix: "assets/icons/user.svg",
+                  ),
+                  AppTextFormField(
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return 'Second field is required';
+                      }
+                      return null;
+                    },
+                    hintText: "Familiya",
+                    controller: lastNameController,
+                    prefix: "assets/icons/user.svg",
+                  ),
+                  AppTextFormField(
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return 'Third field is required';
+                      }
+                      return null;
+                    },
+                    hintText: "Elektron pochta",
+                    controller: emailController,
+                    prefix: "assets/icons/email.svg",
+                  ),
+                ],
               ),
             ),
-            SizedBox(height: 40.h),
+            SizedBox(height: 10.h),
             SocialLoginSection(),
-            SizedBox(height: 53.h),
+            SizedBox(height: 27.h),
             SignUpBottomSection(
               callback: () {
                 if (formKey.currentState!.validate()) {

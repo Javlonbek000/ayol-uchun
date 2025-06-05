@@ -2,6 +2,7 @@ import 'package:ayol_uchun/core/routing/routes.dart';
 import 'package:ayol_uchun/features/auth/managers/login/login_bloc.dart';
 import 'package:ayol_uchun/features/auth/managers/sign_up/sign_up_bloc.dart';
 import 'package:ayol_uchun/features/auth/pages/login_view.dart';
+import 'package:ayol_uchun/features/auth/pages/sign_up_view/code_view.dart';
 import 'package:ayol_uchun/features/auth/pages/sign_up_view/password_view.dart';
 import 'package:ayol_uchun/features/auth/pages/sign_up_view/phone_view.dart';
 import 'package:ayol_uchun/features/auth/pages/sign_up_view/sign_up_view.dart';
@@ -30,6 +31,7 @@ final router = GoRouter(
       routes: [
         GoRoute(path: Routes.signUp, builder: (context, state) => SignUpView()),
         GoRoute(path: Routes.phone, builder: (context, state) => PhoneView()),
+        GoRoute(path: Routes.code, builder: (context, state) => CodeView(),),
         GoRoute(
           path: Routes.password,
           builder: (context, state) => PasswordView(),

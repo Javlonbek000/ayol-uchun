@@ -1,8 +1,10 @@
+import 'package:ayol_uchun/core/routing/routes.dart';
 import 'package:ayol_uchun/data/models/category/category_model.dart';
 import 'package:ayol_uchun/features/common/widgets/buttons/app_button_image.dart';
 import 'package:ayol_uchun/features/home/widgets/app_category_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeCategorySection extends StatelessWidget {
   const HomeCategorySection({super.key, required this.categories});
@@ -45,7 +47,9 @@ class HomeCategorySection extends StatelessWidget {
           AppButtonImage(
             title: "Barcha kategoriyalar",
             size: Size(335.w, 44.h),
-            callback: () {},
+            callback: () {
+              context.push(Routes.courses);
+            },
             titleColor: Color(0xFF222222),
             padding: EdgeInsets.symmetric(horizontal: 80.w, vertical: 12.h),
             color: Color(0xFFF5365C),

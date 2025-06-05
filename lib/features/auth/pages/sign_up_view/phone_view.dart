@@ -56,7 +56,7 @@ class _PhoneViewState extends State<PhoneView> {
                 prefix: "assets/icons/phone.svg",
               ),
             ),
-            SizedBox(height: 330.h,),
+            Spacer(),
             SizedBox(
               height: 94.h,
               child: Column(
@@ -70,7 +70,7 @@ class _PhoneViewState extends State<PhoneView> {
                         context.read<SignUpBloc>().add(
                           SSecondPage(phoneNumber: phoneController.text),
                         );
-                        context.push(Routes.password);
+                        context.push(Routes.code);
                       }else{
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
