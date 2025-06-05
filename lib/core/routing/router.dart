@@ -13,7 +13,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 final router = GoRouter(
-  initialLocation: Routes.home,
+  initialLocation: Routes.login,
   routes: [
     GoRoute(
       path: Routes.login,
